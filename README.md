@@ -60,5 +60,11 @@ Contributions are welcome! If you have a model to recommend or a benchmark to sh
 
 This repository is licensed under the [MIT License](LICENSE).
 
+
+## ✨ Star History
+
+
+[![Star History Chart](https://api.star-history.com/svg?repos=ishandutta2007/Free-Speech-to-Text&type=date&legend=bottom-right)](https://www.star-history.com/#ishandutta2007/Free-Speech-to-Text&type=date&legend=bottom-right)
+
 ---
 *Maintained by the Free-Speech-to-Text Community.*
