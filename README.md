@@ -1,8 +1,12 @@
+<div align="center">
+  <img src="assets/banner.svg" alt="Free Speech-to-Text Banner" width="100%" />
+</div>
+
 # 🎙️ Free Speech-to-Text (STT)
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://github.com/ellerbrock/open-source-badges/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishan/Free-Speech-to-Text/graphs/commit-activity)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://github.com/ishandutta2007/Free-Speech-to-Text/graphs/commit-activity)
 
 **Free-Speech-to-Text** is a curated collection and guide to the world's most powerful, private, and cost-effective open-source Automatic Speech Recognition (ASR) models. This repository helps developers and researchers find the best tools to convert audio to text without relying on expensive, privacy-invasive cloud APIs.
 

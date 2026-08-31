@@ -1,0 +1,214 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 420" width="100%" height="100%">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#090d16" />
+      <stop offset="50%" stop-color="#0f172a" />
+      <stop offset="100%" stop-color="#050811" />
+    </linearGradient>
+
+    <!-- Accent Gradients -->
+    <linearGradient id="primaryGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#38bdf8" />
+      <stop offset="50%" stop-color="#818cf8" />
+      <stop offset="100%" stop-color="#c084fc" />
+    </linearGradient>
+
+    <linearGradient id="glowGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#38bdf8" stop-opacity="0.3" />
+      <stop offset="100%" stop-color="#a855f7" stop-opacity="0" />
+    </linearGradient>
+
+    <!-- Glow Filters -->
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+    <filter id="softGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="15" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+
+    <style>
+      .title {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 800;
+        font-size: 52px;
+        fill: url(#primaryGrad);
+        letter-spacing: -1px;
+      }
+      .subtitle {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 20px;
+        fill: #94a3b8;
+      }
+      .badge-text {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+        font-weight: 600;
+        font-size: 13px;
+        fill: #38bdf8;
+      }
+
+      /* Audio wave animations */
+      @keyframes waveAnimation {
+        0%, 100% { transform: scaleY(0.25); }
+        50% { transform: scaleY(1); }
+      }
+      @keyframes pulseOrb {
+        0%, 100% { transform: scale(1); opacity: 0.35; }
+        50% { transform: scale(1.15); opacity: 0.65; }
+      }
+      @keyframes floatSlow {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-8px); }
+      }
+
+      .pulse-orb {
+        transform-origin: 950px 210px;
+        animation: pulseOrb 6s ease-in-out infinite;
+      }
+      .floating-group {
+        animation: floatSlow 5s ease-in-out infinite;
+      }
+
+      .wave-bar {
+        transform-box: fill-box;
+        transform-origin: bottom center;
+        animation: waveAnimation 1.6s ease-in-out infinite;
+      }
+
+      .wb-1 { animation-delay: 0.1s; }
+      .wb-2 { animation-delay: 0.35s; }
+      .wb-3 { animation-delay: 0.6s; }
+      .wb-4 { animation-delay: 0.2s; }
+      .wb-5 { animation-delay: 0.75s; }
+      .wb-6 { animation-delay: 0.4s; }
+      .wb-7 { animation-delay: 0.9s; }
+      .wb-8 { animation-delay: 0.5s; }
+      .wb-9 { animation-delay: 0.8s; }
+      .wb-10 { animation-delay: 0.25s; }
+      .wb-11 { animation-delay: 0.65s; }
+      .wb-12 { animation-delay: 0.45s; }
+      .wb-13 { animation-delay: 0.85s; }
+      .wb-14 { animation-delay: 0.15s; }
+      .wb-15 { animation-delay: 0.7s; }
+      .wb-16 { animation-delay: 0.3s; }
+      .wb-17 { animation-delay: 0.55s; }
+      .wb-18 { animation-delay: 0.95s; }
+    </style>
+  </defs>
+
+  <!-- Background Base -->
+  <rect width="1200" height="420" rx="16" fill="url(#bgGradient)" />
+
+  <!-- Subtle Grid Pattern -->
+  <g opacity="0.07" stroke="#38bdf8" stroke-width="1">
+    <path d="M 0 70 L 1200 70 M 0 140 L 1200 140 M 0 210 L 1200 210 M 0 280 L 1200 280 M 0 350 L 1200 350" />
+    <path d="M 120 0 L 120 420 M 240 0 L 240 420 M 360 0 L 360 420 M 480 0 L 480 420 M 600 0 L 600 420 M 720 0 L 720 420 M 840 0 L 840 420 M 960 0 L 960 420 M 1080 0 L 1080 420" />
+  </g>
+
+  <!-- Ambient Glow Circles -->
+  <circle class="pulse-orb" cx="950" cy="210" r="140" fill="url(#glowGrad)" filter="url(#softGlow)" />
+  <circle cx="200" cy="80" r="100" fill="#38bdf8" opacity="0.08" filter="url(#softGlow)" />
+  <circle cx="1050" cy="340" r="120" fill="#a855f7" opacity="0.12" filter="url(#softGlow)" />
+
+  <!-- Left Content Area -->
+  <g transform="translate(80, 0)">
+    <!-- Badge -->
+    <g transform="translate(0, 75)">
+      <rect width="210" height="32" rx="16" fill="#0f2847" stroke="#0284c7" stroke-width="1.5" opacity="0.9" />
+      <circle cx="16" cy="16" r="4" fill="#38bdf8">
+        <animate attributeName="opacity" values="1;0.3;1" dur="2s" repeatCount="indefinite" />
+      </circle>
+      <text x="30" y="21" class="badge-text">OPEN SOURCE ASR GUIDE</text>
+    </g>
+
+    <!-- Main Title -->
+    <text x="0" y="170" class="title" filter="url(#glow)">Free Speech-to-Text</text>
+
+    <!-- Subtitle & Description -->
+    <text x="0" y="218" class="subtitle">Private, Fast &amp; High-Accuracy Automatic Speech Recognition</text>
+    
+    <!-- Feature Pills -->
+    <g transform="translate(0, 265)">
+      <!-- Pill 1: 100% Offline -->
+      <g transform="translate(0, 0)">
+        <rect width="135" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">🔒 100% Offline</text>
+      </g>
+      <!-- Pill 2: Zero Cost -->
+      <g transform="translate(147, 0)">
+        <rect width="125" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">💰 Zero Cost</text>
+      </g>
+      <!-- Pill 3: Top Models -->
+      <g transform="translate(284, 0)">
+        <rect width="180" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">⚡ Whisper &amp; Canary &amp; Vosk</text>
+      </g>
+      <!-- Pill 4: Multilingual -->
+      <g transform="translate(476, 0)">
+        <rect width="145" height="34" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1" />
+        <text x="14" y="22" font-family="system-ui, sans-serif" font-size="13" font-weight="500" fill="#cbd5e1">🌍 100+ Languages</text>
+      </g>
+    </g>
+
+    <!-- Bottom Status Line -->
+    <g transform="translate(0, 345)">
+      <text font-family="system-ui, sans-serif" font-size="12" font-weight="500" fill="#64748b">
+        TRANSCRIPTION <tspan fill="#38bdf8">•</tspan> SUBTITLES <tspan fill="#38bdf8">•</tspan> VOICE ASSISTANTS <tspan fill="#38bdf8">•</tspan> EDGE AI
+      </text>
+    </g>
+  </g>
+
+  <!-- Right Visual: Microphone + Animated Sound Waveform Graphic -->
+  <g class="floating-group" transform="translate(930, 210)">
+    <!-- Tech Circle Backdrop -->
+    <circle cx="0" cy="0" r="110" fill="#111827" stroke="#1e293b" stroke-width="2" />
+    <circle cx="0" cy="0" r="92" fill="none" stroke="#0284c7" stroke-width="1.5" stroke-dasharray="6,6" opacity="0.5">
+      <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="30s" repeatCount="indefinite" />
+    </circle>
+    <circle cx="0" cy="0" r="75" fill="#0f172a" stroke="#38bdf8" stroke-width="1.5" opacity="0.8" />
+
+    <!-- Microphone Icon inside inner circle -->
+    <g transform="translate(-18, -32) scale(1.5)" fill="url(#primaryGrad)">
+      <!-- Mic Head -->
+      <rect x="8" y="4" width="8" height="15" rx="4" fill="url(#primaryGrad)" />
+      <!-- Mic Arc / Stand -->
+      <path d="M 5 13 A 7 7 0 0 0 19 13" fill="none" stroke="url(#primaryGrad)" stroke-width="2" stroke-linecap="round" />
+      <line x1="12" y1="20" x2="12" y2="25" stroke="url(#primaryGrad)" stroke-width="2" stroke-linecap="round" />
+      <line x1="8" y1="25" x2="16" y2="25" stroke="url(#primaryGrad)" stroke-width="2" stroke-linecap="round" />
+    </g>
+
+    <!-- Animated Waveform Soundbars flanking the mic visual -->
+    <g transform="translate(-165, 0)">
+      <!-- Left side bars -->
+      <rect class="wave-bar wb-1" x="0" y="-12" width="5" height="24" rx="2.5" fill="#06b6d4" />
+      <rect class="wave-bar wb-2" x="10" y="-22" width="5" height="44" rx="2.5" fill="#0ea5e9" />
+      <rect class="wave-bar wb-3" x="20" y="-35" width="5" height="70" rx="2.5" fill="#38bdf8" />
+      <rect class="wave-bar wb-4" x="30" y="-18" width="5" height="36" rx="2.5" fill="#60a5fa" />
+      <rect class="wave-bar wb-5" x="40" y="-45" width="5" height="90" rx="2.5" fill="#818cf8" />
+      <rect class="wave-bar wb-6" x="50" y="-28" width="5" height="56" rx="2.5" fill="#a78bfa" />
+      <rect class="wave-bar wb-7" x="60" y="-55" width="5" height="110" rx="2.5" fill="#c084fc" />
+      <rect class="wave-bar wb-8" x="70" y="-38" width="5" height="76" rx="2.5" fill="#818cf8" />
+      <rect class="wave-bar wb-9" x="80" y="-20" width="5" height="40" rx="2.5" fill="#38bdf8" />
+    </g>
+
+    <g transform="translate(85, 0)">
+      <!-- Right side bars -->
+      <rect class="wave-bar wb-10" x="0" y="-20" width="5" height="40" rx="2.5" fill="#38bdf8" />
+      <rect class="wave-bar wb-11" x="10" y="-38" width="5" height="76" rx="2.5" fill="#818cf8" />
+      <rect class="wave-bar wb-12" x="20" y="-55" width="5" height="110" rx="2.5" fill="#c084fc" />
+      <rect class="wave-bar wb-13" x="30" y="-28" width="5" height="56" rx="2.5" fill="#a78bfa" />
+      <rect class="wave-bar wb-14" x="40" y="-45" width="5" height="90" rx="2.5" fill="#818cf8" />
+      <rect class="wave-bar wb-15" x="50" y="-18" width="5" height="36" rx="2.5" fill="#60a5fa" />
+      <rect class="wave-bar wb-16" x="60" y="-35" width="5" height="70" rx="2.5" fill="#38bdf8" />
+      <rect class="wave-bar wb-17" x="70" y="-22" width="5" height="44" rx="2.5" fill="#0ea5e9" />
+      <rect class="wave-bar wb-18" x="80" y="-12" width="5" height="24" rx="2.5" fill="#06b6d4" />
+    </g>
+  </g>
+
+  <!-- Border Highlight -->
+  <rect x="0.5" y="0.5" width="1199" height="419" rx="16" fill="none" stroke="url(#primaryGrad)" stroke-width="1" opacity="0.4" />
+</svg>
